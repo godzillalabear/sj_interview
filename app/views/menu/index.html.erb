@@ -1,0 +1,16 @@
+<h1> Menu </h1>
+<% @menus.each do |menu| %> 
+  <p> <%= menu.name %> </p>
+	<% menu.dishes.each do |dish| %>
+		<div class="d-flex d-inline-flex flex-row rounded m-3">
+			<div class="card mb-3 shadow-lg" style="width: 18rem;">
+				<img src="<%= dish.photo %>" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title"><%= dish.name %></h5>
+					<p class="card-text">price:  <%= dish.price %> </p>
+					<p class="card-text">discount: <%= dish.discount %> </p>
+				</div>
+			</div>
+		</div>
+	<% end %>
+<% end %>
